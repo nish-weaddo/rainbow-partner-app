@@ -1,0 +1,1182 @@
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.header {
+  padding: 20px 0px;
+  background: #F2F5FE;
+background: linear-gradient(90deg, rgba(242, 245, 254, 1) 2%, rgba(255, 255, 255, 0.17) 89%);
+}
+
+.phone {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7C3996;
+}
+
+.loc-heading {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.locations {
+  padding: 30px 0px;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.location-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+
+}
+
+.location-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+/* Default overlay: dark gradient at bottom for label */
+.location-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 50%);
+
+}
+
+.contact {
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: end !important;
+}
+
+
+/* Label bar at bottom */
+.location-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  border-radius: 10px;
+}
+
+.location-card:hover .location-label {
+  background: #fff;
+  color: #060606;
+}
+
+.location-card:hover .location-label img {
+  filter: brightness(0) saturate(100%) invert(21%) sepia(33%) saturate(1150%) hue-rotate(240deg) brightness(90%) contrast(95%);
+}
+
+/* ── Page Title ── */
+.page-heading {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+  padding: 20px 0px;
+}
+
+/* ── Search Bar Row ── */
+.search-bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.search-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 240px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-dropdown .sd-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-dropdown .sd-left i {
+  color: #888;
+  font-size: 15px;
+}
+
+.search-dropdown .fa-chevron-down {
+  color: #888;
+  font-size: 12px;
+}
+
+.search-input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 260px;
+  font-size: 14px;
+  color: #666;
+}
+
+.input-gap {
+  justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown .form-control {
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+   width: 324px;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, rgba(124, 57, 150, 1) 0%, rgba(124, 57, 150, 0.17) 42%) border-box;
+}
+.dropdown .form-control:focus {
+    color: #212529;
+   
+     border: 1px solid transparent;
+
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, rgba(124, 57, 150, 1) 0%, rgba(124, 57, 150, 0.17) 42%) border-box;
+    outline: 0;
+    box-shadow: none;
+}
+
+.search-input-box .sd-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input-box .sd-left i {
+  color: #888;
+  font-size: 15px;
+}
+
+.btn-search-doctors {
+  background: #7c3996;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 45px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+
+/* ── Doctor Card ── */
+.doc-card {
+  background: #F5F5F5;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.doc-card-inner {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.doc-photo {
+  width: 105px;
+  height: 120px;
+  border: 3px solid #FFFFFF;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #e0e0e0;
+}
+
+.doc-info {
+  flex: 1;
+}
+
+.doc-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #353535;
+}
+
+.doc-designation {
+  font-size: 12px;
+  color: #4B4B4B;
+  margin-bottom: 8px;
+}
+
+.doc-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.doc-meta li {
+  font-size: 10px;
+  color: #2D2D2D;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.doc-meta li i {
+  color: #888;
+  font-size: 11px;
+  width: 13px;
+  text-align: center;
+}
+
+/* ── Card Buttons ── */
+.doc-card-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-book {
+  background: #7c3996;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+
+
+.btn-call {
+  background: #E0E0E0;
+  color: #222222;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.btn-call:hover {
+  background: #e2e2e2;
+}
+
+/* ── Grid ── */
+.doctors-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.input-text {
+  font-size: 13px;
+}
+
+/* modal */
+  
+    /* Modal */
+    .appt-modal .modal-content {
+      border-radius: 16px;
+      border: 1px solid #e0e0e0;
+      padding: 8px;
+    }
+ 
+    .appt-modal .modal-header {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+ 
+    .appt-doctor-name {
+      font-size: 24px;
+    font-weight: 600;
+    color: #7c3996;
+    }
+ 
+    .appt-doctor-designation {
+         font-size: 16px;
+    color: #2D2D2D;
+      margin-bottom: 0;
+    }
+ 
+    /* Tab Toggle */
+    .appt-tab-wrapper {
+      display: flex;
+      border: 1px solid #5b2d8e;
+      border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+      overflow: hidden;
+      margin: 15px 0 0px;
+    }
+ 
+    .appt-tab-btn {
+      flex: 1;
+      padding: 13px 0;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.2s, color 0.2s;
+    }
+ 
+    .appt-tab-btn.active-tab {
+      font-weight: 400;
+    font-size: 16px;
+    background: #7c3996;
+    color: #fff;
+    }
+ 
+    .appt-tab-btn.inactive-tab {
+      font-weight: 400;
+    font-size: 16px;
+      background: #fff;
+      color: #7c3996;
+    }
+ 
+    /* Date Slider */
+    .date-slider-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+ 
+    .date-arrow-btn {
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #aaa;
+      cursor: pointer;
+      padding: 0 2px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+ 
+.date-scroll-area {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  flex: 1;
+
+  scrollbar-width: none; /* Firefox */
+}
+
+.date-scroll-area::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.date-scroll-area > * {
+  flex: 0 0 calc((100% - 112px) / 8);
+}
+ 
+    .date-pill {
+      
+          background: #F5F5F5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 11px 6px;
+      min-width: 64px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.2s, background 0.2s;
+      flex-shrink: 0;
+    }
+ 
+    .date-pill.selected-date .date-num{
+     color: #7c3996;
+    }
+ 
+    .date-num {
+      font-size: 16px;
+      font-weight: 700;
+      color: #696969;
+    }
+ 
+    .date-pill.selected-date .date-num { color: #7c3996; }
+ 
+    .date-day {
+      font-size: 12px;
+      font-weight: 600;
+      color: #696969;
+    }
+ 
+    .date-pill.selected-date .date-day { color:#7c3996; }
+ 
+    .date-month {
+      font-size: 9px;
+      color: #aaa;
+    }
+ 
+    .date-pill.selected-date .date-month { color: #7c3996; }
+ 
+    /* Time Slots */
+    .time-slots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+ 
+    .time-slot-pill {
+     border: 0.47px solid #ddd;
+    border-radius: 21px;
+    padding: 7px 4px;
+    font-size: 11px;
+    color: #4C4C4C;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    }
+ 
+    .time-slot-pill.selected-slot {
+      color: #7c3996;
+    }
+ 
+    /* Book Button */
+   .btn-book-modal {
+  width: 62%;
+  background: #7c3996;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin: 0 auto;
+}
+   
+ 
+    /* No Slots Available */
+    .no-slots-box {
+      text-align: center;
+      margin: 35px;
+    }
+    .custom-hr {
+  border: none;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #7c3996 0,
+    #7c3996 5px,
+    transparent 5px,
+    transparent 10px
+  );
+}
+    .no-slots-title {
+     font-size: 16px;
+    font-weight: 400;
+    color: #2D2D2D;
+    margin-bottom: 0px;
+    }
+ 
+    .no-slots-subtitle {
+      font-size: 12px;
+    font-weight: 400;
+    color: #2D2D2D;
+    }
+ 
+    /* ── Confirm Modal ── */
+    .confirm-modal .modal-content {
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      padding: 14px;
+    }
+ 
+    .confirm-modal .modal-header {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+ .modal-header{
+      align-items: baseline !important; 
+ }
+ .modal-header .btn-close {
+  background-image: none; /* default SVG hatao */
+  opacity: 1;
+}
+.modal-header .btn-close:focus,
+.modal-header .btn-close:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.modal-header .btn-close::before {
+  content: "✕";
+  font-size: 20px;
+  color: #000;
+}
+
+    .confirm-title {
+      font-size: 24px;
+    font-weight: 600;
+    color: #7c3996 !important;
+    margin-bottom: 0;
+    }
+ 
+    .confirm-consultation-type {
+      font-size: 16px;
+    font-weight: 500;
+    color: #2D2D2D;
+    margin-bottom: 14px;
+    }
+ 
+    .confirm-datetime-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 14px;
+    }
+ 
+    .confirm-datetime-item {
+      font-size: 16px;
+      font-weight: 400;
+      color: #2D2D2D;
+      gap: 5px;
+    display: flex;
+    align-items: center;
+    }
+ 
+    .confirm-datetime-item i {
+      color: #5b2d8e;
+      font-size: 18px;
+    }
+ 
+    .confirm-note {
+     font-size: 16px;
+    color: #696969;
+    margin-bottom: 10px;
+    }
+ 
+    .confirm-phone-label {
+       display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2D2D2D;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 0;
+    flex-shrink: 0;
+    margin:0px !important;
+    }
+ 
+    .confirm-phone-input-wrap {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 0px 16px;
+      margin-bottom: 22px;
+      background: #fff;
+    }
+ 
+    .confirm-country-code {
+      display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #2D2D2D;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 0;
+    flex-shrink: 0;
+    }
+ 
+    .confirm-country-code i {
+      font-size: 16px;
+      color: #2D2D2D;
+    }
+ 
+    .confirm-divider {
+      width: 1px;
+      height: 22px;
+      background: #ddd;
+      margin: 0 12px;
+      flex-shrink: 0;
+    }
+ 
+    .confirm-phone-field {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      color: #aaa;
+      background: transparent;
+    }
+ 
+    .btn-submit-modal {
+      width: 100%;
+    background: #7c3996 !important;
+    color: #F5F5F5;
+    border: none;
+    border-radius: 30px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    }
+ 
+    .btn-submit-modal:hover { background: #2e1455; }
+ 
+    /* ── Patient Table Modal ── */
+    .patient-modal .modal-content {
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      padding: 8px;
+          min-width: 872px;
+    }
+ 
+    .patient-modal .modal-header {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+ 
+    .payable-amount {
+          font-size: 16px;
+    font-weight: 500;
+    color: #F81F0E;
+    margin-bottom: 6px;
+    }
+ .tbody, td, tfoot, tr {
+  border-style: solid !important;
+    border-width: 0.5px !important;
+ border-color: #4D4D4D !important;
+ }
+ .tbody , thead, tr{
+  border-color: #DCCDEA !important;
+ }
+    .patient-table-wrap {
+         max-height: 300px;
+    overflow-y: auto !important;
+    width: 100%; 
+      overflow: hidden;
+      margin-bottom: 22px;
+       scrollbar-width: none;
+  -ms-overflow-style: none;
+    }
+    .patient-table-wrap::-webkit-scrollbar {
+  display: none;
+}
+ 
+    .patient-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+    }
+ 
+    .patient-table thead tr {
+      background: #DCCDEA;
+    }
+ 
+    .patient-table thead th {
+      padding: 12px 14px;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      border: none;
+    }
+ 
+    .patient-table tbody tr {
+      border-top: 1.5px solid #e8e0f5;
+    }
+ 
+    .patient-table tbody td {
+     font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    color: #000000;
+    vertical-align: middle;
+    }
+ 
+    .patient-action-btns {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+ 
+    .btn-pay-now {
+    background: #7c3996;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 6px 22px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    }
+ 
+    .btn-pay-hospital {
+      background: #fff;
+    color: #7c3996;
+    border: 1px solid #7c3996;
+    border-radius: 20px;
+    padding: 6px 32px;
+    font-size: 12px;
+    font-weight: 500;
+      white-space: nowrap;
+    }
+ 
+    .btn-final-submit {
+      width: 80.5%;
+      background: #7c3996;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+ 
+   
+ 
+    /* ── OTP Modal ── */
+    .otp-modal .modal-content {
+      border-radius: 16px;
+      border: 1px solid #e0e0e0;
+      padding: 8px;
+    }
+ 
+    .otp-modal .modal-header {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+ 
+    .otp-modal-title {
+      font-size: 24px;
+    font-weight: 600;
+    color: #7c3996;
+    margin-bottom: 0px;
+    }
+ 
+    .otp-consult-type {
+      font-size: 16px;
+    font-weight: 500;
+    color: #2D2D2D;
+    margin-bottom: 5px;
+    }
+ 
+    .otp-datetime-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 10px;
+    }
+ 
+    .otp-datetime-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+    }
+ 
+    .otp-datetime-item i {
+      color: #5b2d8e;
+      font-size: 18px;
+    }
+ 
+    .otp-payable-amount {
+      font-size: 16px;
+    font-weight: 600;
+    color: #F81F0E;
+    margin-bottom: 4px;
+    }
+ 
+    .otp-sent-note {
+      font-size: 16px;
+    color: #696969;
+    margin-bottom: 10px;
+    }
+ 
+    .otp-input-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2D2D2D;
+      margin-bottom: 8px;
+    }
+ 
+    .otp-input-field {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: #B3B3B3;
+      outline: none;
+      margin-bottom: 12px;
+      background: #fff;
+      font-weight: 400;
+    }
+ 
+    .otp-input-field::placeholder { color: #aaa; }
+ 
+    .otp-input-field:focus { border-color: #5b2d8e; }
+ 
+    .otp-resend-row {
+      font-size: 16px;
+      color: #696969;
+      margin-bottom: 12px;
+    }
+ 
+    .otp-resend-link {
+      color: #7c3996;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
+    }
+ 
+    .otp-resend-link:hover { text-decoration: underline; }
+ 
+    .btn-confirm-otp {
+      width: 100%;
+    background: #7c3996;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 11px;
+    font-size: 16px;
+    font-weight: 600 !important;
+    }
+ 
+    /* Phone validation error */
+    .phone-error-msg {
+      color: #e53e3e;
+    font-size: 12px;
+    margin: 0px 20px;
+    display: none;
+    }
+   .color{
+    min-height: 302px;
+    border-bottom-left-radius: 10px;
+    padding: 20px 10px 20px 10px;
+    background: #F1EEF8;
+    border-bottom-right-radius: 10px;
+   }
+     /* ── Booking Confirmed Modal ── */
+    .booked-modal .modal-content {
+      border-radius: 16px;
+      border: 1px solid #e0e0e0;
+      padding: 8px;
+      text-align: center;
+    }
+    .booked-modal .modal-header {
+      border-bottom: none;
+      justify-content: flex-end;
+      padding-bottom: 0;
+    }
+    .booked-checkmark-circle {
+      width: 63px; height: 63px;
+      border-radius: 50%;
+      background: #E9FFDB;
+      display: flex; align-items: center; justify-content: center;
+      margin: 10px auto 20px;
+    }
+    .booked-checkmark-circle svg { width: 38px; height: 38px; }
+    .booked-heading {
+      font-size: 20px; font-weight: 600; color: #7c3996; margin-bottom: 12px;
+    }
+    .booked-description {
+      font-size: 14px; color: #2D2D2D; letter-spacing: 2%;
+      margin-bottom: 28px; max-width: 340px; margin-left: auto; margin-right: auto;
+    }
+    .booked-doctor-card {
+      display: flex; align-items: center; gap: 14px;
+      background: #F5F5F5; border-radius: 10px;
+      padding: 10px; text-align: left; margin-bottom: 10px;
+    }
+    .booked-doctor-photo { width: 60px; height: 60px; border-radius: 10px; object-fit: cover; }
+    .booked-doctor-name { font-size: 14px;
+    font-weight: 600;
+    color: #7c3996;
+    margin-bottom: 4px; }
+    .booked-doctor-designation { font-size: 10px;
+    color: #2D2D2D;
+    margin-bottom: 0; }
+    .p-12{
+      padding:0px 12px 12px 12px;
+    }
+  .mob-txt{
+    display: none;
+  }
+@media (max-width: 767px) {
+  .locations-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .phone{
+    display: none !important;
+  }
+  .mob-txt{
+    display: block;
+  }
+  .mob-txt p{
+    font-size: 16px;
+    font-weight: 600;
+    width: 237px;
+    text-align: center;
+  }
+  .mob-txt a{
+        padding: 8px 20px;
+    background: #7c3996;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.text-center {
+  margin-top: 20px;
+}
+  .location-card img {
+    display: none;
+  }
+.btn-final-submit {
+    width: 100%;}
+  .location-card {
+    background: #7E3A930D;
+    box-shadow: none;
+  }
+
+  .location-label {
+    color: black;
+  }
+
+  .location-label img {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(33%) saturate(1150%) hue-rotate(240deg) brightness(90%) contrast(95%);
+  }
+
+  .arrow-btn img {
+    display: block !important;
+    width: 20px;
+    height: 20px;
+  }
+
+  .location-card .overlay {
+    display: none;
+  }
+
+  .location-card {
+    height: 44px;
+    width: 100%;
+
+  }
+.patient-modal .modal-content {
+  min-width: auto;
+}
+  .loc-heading {
+    font-size: 18px;
+  }
+
+  .location-label {
+    bottom: 0px !important;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .logo img {
+    width: 50%;
+  }
+
+  .contact {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .locations {
+    padding: 0px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-dropdown,
+  .search-input-box {
+    width: 100%;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-dropdown,
+  .search-input-box {
+    width: 100%;
+  }
+
+  .page-heading {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+
+  .dropdown .form-control {
+    margin-bottom: 10px;
+  }
+
+  .search-bar-row {
+    display: block;
+  }
+
+  .btn-search-doctors {
+    width: 100%;
+  }
+  .input-gap {
+    justify-content: space-between;
+    gap: 0px;
+    width: 100%;
+}
+.appt-doctor-name {
+    font-size: 18px;}
+    .appt-doctor-designation {
+    font-size: 14px;}
+    .search-bar-row .dropdown .form-control{
+      width: 100%;
+    }
+    .date-day {
+    font-size: 8px;}
+    .time-slots-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .time-slot-pill{
+      font-size: 8px;
+    }
+    .confirm-title {
+    font-size: 18px;}
+    .confirm-consultation-type {
+    font-size: 12px;}
+    .confirm-datetime-item {
+    font-size: 12px;}
+    .confirm-datetime-item img{
+           width: 14px;
+    height: 14px;
+    }
+    .confirm-note {
+    font-size: 12px;}
+    .confirm-phone-label {
+      font-size: 14px;
+
+    }
+    .btn-pay-now {
+          padding: 4px 15px;
+    font-size: 8px;
+    }
+    .patient-action-btns {
+    display: block;}
+    .btn-pay-hospital{
+          padding: 4px 5px;
+    font-size: 8px;
+    }
+    .otp-modal-title{
+          font-size: 18px;
+    }
+    .otp-consult-type {
+    font-size: 12px;}
+    .otp-datetime-item {
+      font-size: 14px;
+    }
+    .otp-payable-amount {
+    font-size: 13px;}
+    .otp-sent-note {
+    display: none;}
+    .otp-resend-row {
+    text-align: center;}
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+ .doctors-grid {
+      grid-template-columns: repeat(2, 1fr);
+ }
+ .dropdown .form-control {
+  width: 221px;
+ }
+ .locations-grid {
+      grid-template-columns: repeat(2, 1fr);
+ }
+  
+}
+@media (max-width: 360px) {
+   .btn-book {
+    font-size: 13px;
+   }
+   .btn-call {
+    font-size: 13px;
+   }
+   .doc-name {
+    font-size: 14px;}
+    .doc-designation {
+    font-size: 11px;}
+}
